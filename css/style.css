@@ -90,7 +90,7 @@ header {
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--text-primary);
-    padding: 1.5rem
+    padding: 1.5rem 0;
 }
 
 .brand i {
@@ -715,4 +715,5 @@ footer {
     background-size: 1000px 100%;
     animation: shimmer 2s infinite;
 }
+
 

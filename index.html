@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Digest Dashboard</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%234a5f3a'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='white' font-family='Arial, sans-serif' font-weight='bold'>D</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media .css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="collapse" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>About This Dashboard</h4>
+                        <p>Your personalized daily digest bringing together weather updates, breaking news, and inspiring photography—all in one beautiful, easy-to-use interface. Stay informed and inspired with real-time data from trusted sources.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Connect With Us</h4>
+                        <ul class="social-links">
+                            <li><a href="#" class="text-decoration-none"><i class="fab fa-twitter"></i>Follow on Twitter</a></li>
+                            <li><a href="#" class="text-decoration-none"><i class="fab fa-facebook"></i>Like on Facebook</a></li>
+                            <li><a href="#" class="text-decoration-none"><i class="far fa-envelope"></i>Email me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar shadow-sm">
+            <div class="container">
+                <div class="brand">
+                    <i class="fas fa-chart-line"></i>
+                    <strong>Daily Digest Dashboard</strong>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars" id="navbarIcon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container mt-4">
+        <div class="row g-4 mb-4">
+            <!-- Main Content: Left Column -->
+            <div class="col-lg-8 col-12">
+                <div class="main-content-wrapper">
+
+                    <!-- Weather Section Form -->
+                    <div class="glass-card weather-form-card">
+                        <form class="section-form" id="weather-form">
+                            <div class="form-row">
+                                <div class="col-12">
+                                    <label for="location-input" class="form-label">
+                                        <i class="fas fa-map-marker-alt"></i> Your Location
+                                    </label>
+                                    <div class="input-group modern-input-group">
+                                        <input type="text" class="form-control" id="location-input" placeholder="Enter city name (e.g., Lagos, London)" required>
+                                        <button type="button" class="btn btn-primary modern-btn" id="update-weather-button">
+                                            <i class="fas fa-sync-alt"></i> Update
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Weather Section Content -->
+                    <section id="weather-section" class="content-section">
+                        <!-- Weather details will go here -->
+                    </section>
+
+                    <!-- Default News Section -->
+                    <section id="default-news-section" class="content-section">
+                        <div class="section-header">
+                            <h2><i class="fas fa-globe"></i> Today's Top Stories</h2>
+                            <div class="header-line"></div>
+                        </div>
+                        <div class="default-news-grid" id="default-news-grid">
+                            <!-- Default news content will go here -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Main Content: Right Column -->
+            <div class="col-lg-4 col-12">
+                <div class="sidebar-wrapper">
+
+                    <!-- News Section Form -->
+                    <div class="glass-card sidebar-form-card">
+                        <form class="section-form" id="news-form">
+                            <div class="mb-0">
+                                <label for="category-select" class="form-label">
+                                    <i class="fas fa-newspaper"></i> Select News Category
+                                </label>
+                                <div class="input-group modern-input-group">
+                                    <select class="form-select" id="category-select" aria-label="News Category" required>
+                                        <option value="world">World</option>
+                                        <option value="business">Business</option>
+                                        <option value="technology">Technology</option>
+                                        <option value="sport">Sports</option>
+                                        <option value="environment">Environment</option>
+                                    </select>
+                                    <button type="button" class="btn btn-primary modern-btn" id="update-news-button">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- News Section Content -->
+                    <section id="news-section" class="glass-card content-card">
+                        <!-- News headlines will go here -->
+                    </section>
+
+                    <!-- Photo Gallery Form -->
+                    <div class="glass-card sidebar-form-card">
+                        <form class="section-form" id="photo-gallery-form">
+                            <div class="mb-0">
+                                <label for="photo-search-input" class="form-label">
+                                    <i class="fas fa-images"></i> Photo Gallery
+                                </label>
+                                <div class="input-group modern-input-group">
+                                    <input type="text" class="form-control" id="photo-search-input" placeholder="Search photos... (e.g., Nature, Cars, Pets)" required>
+                                    <button type="button" class="btn btn-primary modern-btn" id="update-photo-gallery-button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Photo Gallery Content -->
+                    <section id="photo-gallery" class="glass-card content-card photo-gallery-container">
+                        <!-- Photo gallery images will go here -->
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Footer section -->
+    <footer class="py-4 mt-5">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p class="mb-1">
+                        <i class="fas fa-copyright"></i> 2026 Daily Digest Dashboard. All Rights Reserved.
+                    </p>
+                    <p class="mb-0 footer-subtitle">
+                        Developed by <a href="https://joshuaabefe.github.io" target="_blank" rel="noopener noreferrer" class="developer-link">joshuaabefe.github.io</a>
+                    </p>
+                    <p class="mb-0 footer-subtitle">Powered by modern APIs</p>
+                </div>
+                <div class="footer-right">
+                    <a href="#" class="btn btn-primary modern-btn back-to-top">
+                        <i class="fas fa-arrow-up"></i> Back to Top
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
